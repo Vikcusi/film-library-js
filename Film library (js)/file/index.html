@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Фильмы</title>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <h1>Кинотека</h1>
+  <form id="film-form">
+    <div class="form-wrapper">
+      <label for="title">Название:</label>
+      <input type="text" id="title" name="title" />
+    </div>
+    <div class="form-wrapper">
+      <label for="genre">Жанр:</label>
+      <input type="text" id="genre" name="genre" />
+    </div>
+    <div class="form-wrapper">
+      <label for="releaseYear">Год:</label>
+      <input type="text" id="releaseYear" name="releaseYear" />
+    </div>
+    <div class="form-wrapper">
+      <label for="isWatched">Успели посмотреть?</label>
+      <input class="input" type="checkbox" id="isWatched" name="isWatched" />
+      <button class="submit" type="submit">Добавить</button>
+    </div>
+  </form>
+  <div class="wrapper-sort">
+    <select id="sorting-condition">
+      <option value="releaseYear">Год</option>
+      <option value="genre">Жанр</option>
+      <option value="title">Название</option>
+    </select>
+    <button class="btn-sort">Сортировать</button>
+  </div>
+  <table id="film-table">
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Жанр</th>
+        <th>Год</th>
+        <th>Успели посмотреть?</th>
+        <th>Действие</th>
+      </tr>
+    </thead>
+    <tbody id="film-tbody">
+      <!-- Rows will be inserted here -->
+    </tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+
+</html>
